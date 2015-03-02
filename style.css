@@ -1,0 +1,308 @@
+/*
+  THE BELOW @IMPORT STATEMENTS INCLUDE OUR BASE STYLESHEETS IN THIS ONE.  
+  WE SHOULD "CONCATENATE" THESE WHEN WE'RE DONE SO EVERYTHING IS IN ONE FILE.
+  EACH TIME WE @IMPORT A STYLESHEET, IT MAKES AN EXTRA REQUEST TO THE SERVER. 
+  THE LESS REQUESTS WE MAKE TO THE SERVER, THE FASTER OUR SITE WILL BE.
+*/
+@import url(css/normalize.min.css);
+@import url(css/grid.css);
+
+
+
+/*
+====================================================================
+SITE LAYOUT SECTION:
+*this is where we put code that applies to the whole page
+layout.  Things like default colors, typography, site
+structure, and helper styles
+====================================================================
+*/
+body, html {
+  height: 100%;
+}
+
+body {
+  background: #555;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, p {
+  margin-top: 0;
+}
+
+h1 a, h2 a, h3 a {
+  text-decoration: none;
+}
+
+.padding {
+  padding: 15px;
+}
+
+.flex {
+  /* ugh.. */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+
+
+/*
+====================================================================
+UI LAYOUT SECTION:
+*this is where we put code that has to do with our site
+controls and user interface.  Things like navigation,
+buttons, links, etc...
+====================================================================
+*/
+.ui {
+  background: #eee;
+  max-width: 200px;
+  position: fixed;
+  z-index: 9000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  font-size: .9em;
+}
+
+.logo {
+  position: relative;
+  z-index:9010;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+}
+
+.logo .title {
+  position: static;
+}
+
+.title {
+  text-align:center;
+  display: block;
+  background: rgba(0,0,0,.9);
+  color: #fff;
+  padding: 10px;
+}
+
+.ui a {
+  text-decoration: none;
+}
+
+.ui ul {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.ui li {
+  list-style:none;
+  margin-bottom: 5px;
+}
+
+.ui form label, .ui input[type="submit"] {
+  display:none;
+}
+
+.ui input[type="text"] {
+  flex: 1;
+  width: 100%;
+}
+
+.ui .area {
+  margin: 0 0 15px 0;
+}
+
+.socials img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+/*
+====================================================================
+CONTENT LAYOUT SECTION:
+*this is where we put code that has to do with our site main
+content section(s).  Article and comment styling will likely
+go here.
+====================================================================
+*/
+.main {
+  max-width: 1100px;
+  min-width: 1100px; /* remove for responsive */
+  min-height: 100vh;
+  padding: 0 50px 50px 250px;
+  background: #f9f9f9;
+}
+
+.main .feature {
+  position: relative;
+  z-index: 1000;
+}
+
+.title a {
+  color: #fff;
+  display:block;
+  text-decoration: none;
+}
+
+.text {
+  padding-bottom: 15px;
+}
+
+.text h1 {
+  text-align: center;
+  margin: 1em 0;
+  padding: 0 50px;
+  font-weight: bold;
+}
+
+.text p {
+  text-align: justify;
+}
+
+.blogroll h1 {
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+.blogroll article {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.blogroll .feature {
+  max-width: 25%;
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.blogroll .text {
+  float: left;
+  max-width: 75%;
+}
+
+.blogroll h2 {
+  margin-bottom: .25em;
+}
+
+.meta {
+  font-size: .8em;
+  color: #777;
+}
+
+.meta a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1px 5px;
+  background: #eee;
+}
+
+.search-results ol {
+  list-style:none;
+}
+
+
+.wpcf7 form {
+  width: 50%;
+  margin: 15px auto;
+  padding: 15px 15px 0 15px;
+  border: solid 10px #ccc;
+}
+
+.wpcf7 input, .wpcf7 textarea {
+  width: 100%;
+  display: block;
+  border: solid 1px #ccc;
+}
+
+.wpcf7 .ajax-loader {
+  display: none;
+}
+
+/*
+====================================================================
+SIDEBAR LAYOUT SECTION:
+*this is where we put code that has to do with our site
+sidebar section(s).  Widgets and such will be styled here.
+====================================================================
+*/
+
+
+
+
+/*
+====================================================================
+FOOTER LAYOUT SECTION:
+*this is where we put code that has to do with our site
+footer section(s).  Social media, copyrights, ect...
+====================================================================
+*/
+footer {
+  background: #eee;
+  margin-bottom: 50px;
+}
+
+footer h3 {
+  background: #555;
+  color: #fff;
+  padding: 5px 15px;
+  font-weight: 300;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.copyrights {
+  background: #222;
+  padding: 5px;
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
+
+/*
+====================================================================
+MEDIA QUERY SECTION:
+*this is where we put code that makes our site look good on
+different screen sizes.
+====================================================================
+*/
+
+/*
+PHONE LANDSCAPE AND SMALLER
+------------------------------------
+*/
+@media (max-width: 480px) {
+  /* our code here... */
+}
+
+
+/*
+LANDSCAPE PHONE TO PORTRAIT TABLET
+------------------------------------
+*/
+@media (max-width: 767px) {
+  /* our code here... */
+}
