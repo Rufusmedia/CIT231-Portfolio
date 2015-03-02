@@ -13,7 +13,6 @@
           <?php endif; ?>
           <section class="text">
             <?php the_content(); ?>
-            <?php the_field('page_subtitle'); ?>
           </section><!--/.feature-->
         </article>
       <?php endwhile; endif; ?>
